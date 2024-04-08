@@ -1,0 +1,98 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <flowgraph>\
+  <options>\
+    <option type="bool" key="gui_always_on_top" value="false"/>\
+  </options>\
+  <block name="audio_source" key="audio_alsa_source" type="gr::audio::alsa_source">\
+    <param name="device" key="device" value="default"/>\
+    <param name="sample_rate" key="sample_rate" value="44100"/>\
+    <param name="nchan" key="nchan" value="1"/>\
+    <param name="fragment_length" key="frag_len" value="480"/>\
+  </block>\
+  <block name="audio_sink" key="audio_alsa_sink" type="gr::audio::alsa_sink">\
+    <param name="device" key="device" value="default"/>\
+    <param name="sample_rate" key="sample_rate" value="44100"/>\
+    <param name="nchan" key="nchan" value="1"/>\
+    <param name="fragment_length" key="frag_len" value="480"/>\
+  </block>\
+  <block name="pack_to_unpack" key="blocks_tagged_stream_to_pdu_0" type="blocks_tagged_stream_to_pdu">\
+    <param name="pack_packed" key="pack" value="false"/>\
+    <param name="offset_to_tags" key="offset" value="0"/>\
+  </block>\
+  <block name="pack" key="blocks_pdu_to_tagged_stream_0" type="blocks_pdu_to_tagged_stream">\
+    <param name="packed" key="pack" value="false"/>\
+    <param name="tags_offset" key="offset" value="0"/>\
+    <param name="len_tag_key" key="len_tag_key" value=""/>\
+  </block>\
+  <block name="head" key="blocks_head_0" type="blocks_head">\
+    <param name="nitems" key="n" value="1024"/>\
+    <param name="nbytes" key="size" value="1"/>\
+  </block>\
+  <block name="tail" key="blocks_head_1" type="blocks_head">\
+    <param name="nitems" key="n" value="1024"/>\
+    <param name="nbytes" key="size" value="1"/>\
+  </block>\
+  <block name="null_sink" key="blocks_null_sink_0" type="blocks_null_sink"/>\
+  <block name="null_sink_1" key="blocks_null_sink_1" type="blocks_null_sink"/>\
+  <block name="null_sink_2" key="blocks_null_sink_2" type="blocks_null_sink"/>\
+  <block name="null_sink_3" key="blocks_null_sink_3" type="blocks_null_sink"/>\
+  <block name="null_source" key="blocks_null_source_0" type="blocks_null_source"/>\
+  <block name="null_source_1" key="blocks_null_source_1" type="blocks_null_source"/>\
+  <block name="null_source_2" key="blocks_null_source_2" type="blocks_null_source"/>\
+  <block name="null_source_3" key="blocks_null_source_3" type="blocks_null_source"/>\
+  <block name="message_strobe" key="blocks_message_strobe_0" type="blocks_message_strobe">\
+    <param name="msg" key="msg" value=""/>\
+  </block>\
+  <block name="message_debug" key="blocks_message_debug_0" type="blocks_message_debug"/>\
+  <block name="file_source" key="blocks_file_source_0" type="blocks_file_source">\
+    <param name="filename" key="filename" value=""/>\
+  </block>\
+  <block name="file_sink" key="blocks_file_sink_0" type="blocks_file_sink">\
+    <param name="file_name" key="filename" value=""/>\
+    <param name="append_file" key="append" value="false"/>\
+    <param name="unbuffered" key="unbuffered" value="false"/>\
+  </block>\
+  <block name="complex_to_mag" key="blocks_complex_to_mag_0" type="blocks_complex_to_mag"/>\
+  <block name="complex_to_mag_1" key="blocks_complex_to_mag_1" type="blocks_complex_to_mag"/>\
+  <block name="audio_multiply_const" key="blocks_multiply_const_vxx_0" type="blocks_multiply_const">\
+    <param name="k" key="value" value="0.05"/>\
+  </block>\
+  <block name="audio_multiply_const_0" key="blocks_multiply_const_vxx_1" type="blocks_multiply_const">\
+    <param name="k" key="value" value="0.05"/>\
+  </block>\
+  <block name="audio_add_const" key="blocks_add_const_vxx_0" type="blocks_add_const">\
+    <param name="k" key="value" value="1"/>\
+  </block>\
+  <block name="audio_add_const_0" key="blocks_add_const_vxx_1" type="blocks_add_const">\
+    <param name="k" key="value" value="1"/>\
+  </block>\
+  <block name="audio_add_const_1" key="blocks_add_const_vxx_2" type="blocks_add_const">\
+    <param name="k" key="value" value="1"/>\
+  </block>\
+  <block name="audio_add_const_2" key="blocks_add_const_vxx_3" type="blocks_add_const">\
+    <param name="k" key="value" value="1"/>\
+  </block>\
+  <block name="audio_multiply_const_1" key="blocks_multiply_const_vxx_2" type="blocks_multiply_const">\
+    <param name="k" key="value" value="0.05"/>\
+  </block>\
+  <block name="audio_multiply_const_2" key="blocks_multiply_const_vxx_3" type="blocks_multiply_const">\
+    <param name="k" key="value" value="0.05"/>\
+  </block>\
+  <block name="audio_add_const_3" key="blocks_add_const_vxx_4" type="blocks_add_const">\
+    <param name="k" key="value" value="1"/>\
+  </block>\
+  <block name="audio_add_const_4" key="blocks_add_const_vxx_5" type="blocks_add_const">\
+    <param name="k" key="value" value="1"/>\
+  </block>\
+  <block name="audio_multiply_const_3" key="blocks_multiply_const_vxx_4" type="blocks_multiply_const">\
+    <param name="k" key="value" value="0.05"/>\
+  </block>\
+  <block name="audio_multiply_const_4" key="blocks_multiply_const_vxx_5" type="blocks_multiply_const">\
+    <param name="k\
+}
